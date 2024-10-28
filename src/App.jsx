@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import './App.css'
+import Header from "./header";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+     <Header/>
      
-      <h1 className='text-6xl bg-red-700'>Dream11</h1>
       
       
     </>
