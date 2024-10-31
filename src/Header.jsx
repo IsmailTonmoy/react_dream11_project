@@ -1,5 +1,5 @@
-import Banner from "./banner";
-import Navbar from "./navbar";
+import Banner from "./Banner";
+import Navbar from "./Navbar";
 
 export default function Header({balance,onChange}) {
   return (
