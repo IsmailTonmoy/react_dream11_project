@@ -1,7 +1,7 @@
-import { getImgUrl } from "./utility";
+import { getImage } from "./utility";
 import Delete from "../assets/delete.png"
 
-export default function SelectedPlayers({player,onDelete, onAvailable}){
+export default function SelectPlayer({player,onDelete, onAvailable}){
     return (
         <div>
             <div className="border p-4 rounded-2xl flex justify-between items-center">

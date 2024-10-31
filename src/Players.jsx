@@ -1,11 +1,11 @@
-import { getPlData } from "../data/data";
+import { getPlayersData } from "../data/data";
 import PlayerBox from "./PlayerBox";
 import { useState } from "react";
+import SelectPlayer from "./SelectPlayer";
 
 
-
-export default function Players({ }) {
-  const players = getPlData();
+export default function Players({ selectedPlayer, onSelect, onDelete}) {
+  const players = getPlayersData();
   const [isAvailable, setIsAvailable] = useState(true);
 
   return (
@@ -32,9 +32,37 @@ export default function Players({ }) {
             Selected({selectedPlayer.length})
           </p>
         </div>
-        
       </div>
-      
+      {isAvailable && (
+        <div className="border-red-500 grid grid-cols-1 md:grid-cols-3 gap-5">
+          {players.map((player) => (
+            <PlayerBox key={player.id} player={player} onSelect={onSelect} />
+          ))}
+        </div>
+      )}
+
+      {!isAvailable && (
+        <div className="space-y-4">
+          {selectedPlayer.length === 0 ? (
+            <p className="text-center font-bold text-orange-500 text-3xl"> Players Not selected. Click to Add More. </p>
+          ) : (
+            selectedPlayer.map((player) => (
+              <SelectPlayer
+                key={player.id}
+                player={player}
+                onDelete={onDelete}
+              />
+            ))
+          )}
+          <button
+            className="btn bg-[#E7FE29] mt-5"
+            onClick={() => setIsAvailable(true)}
+          >
+            Add More
+          </button>
+        </div>
+      )}
+
     </section>
   );
 }
