@@ -8,8 +8,8 @@ export default function PlayerBox({player,onSelect}) {
   return (
 
 
-    <div className="card bg-base-100 w-[340] shadow-xl">
-      <figure className="pr-12 pl-5  pt-8 w-96 h-96 ">
+    <div className="card bg-base-100 w-[340] shadow-xl relative">
+      <figure className=" pt-8 w-96 h-96 relative left-9">
         <img src={getImage(player.image)} alt="Pic" className="rounded-xl object-cover w-full h-full" />
       </figure>
       <div className="card-body">
