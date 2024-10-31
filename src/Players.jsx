@@ -18,6 +18,20 @@ export default function Players({ }) {
             Selected Players: {selectedPlayer.length}/6
           </h1>
         )}
+        <div className="flex border rounded-lg">
+          <p
+            className={`p-2 ${isAvailable ? "bg-[#E7FE29]" : "bg-gray-400"}`}
+            onClick={() => setIsAvailable(true)}
+          >
+            Available
+          </p>
+          <p
+            className={`p-2 ${!isAvailable ? "bg-[#E7FE29]" : "bg-gray-400"}`}
+            onClick={() => setIsAvailable(false)}
+          >
+            Selected({selectedPlayer.length})
+          </p>
+        </div>
         
       </div>
       
