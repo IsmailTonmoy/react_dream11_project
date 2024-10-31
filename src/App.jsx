@@ -12,11 +12,11 @@ export default function App() {
   const [selectedPlayer, setSelectedPlayer]=useState([])
 
   function handleClick() {
-    setBalance(balance + 60000000);
+    setBalance(balance + 500000);
     notify();
   }
   function notify() {
-    toast("60000000 coins has been added to your balance!");
+    toast("500000 coins has been added to the balance.");
   }
 
   function error(player) {
