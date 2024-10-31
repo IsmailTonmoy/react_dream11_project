@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Header from "./header";
+import Header from "./Header";
 import Footer from "./Footer";
 import Players from "./Players";
 import { ToastContainer, toast } from "react-toastify";
