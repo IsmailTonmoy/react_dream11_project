@@ -1,18 +1,18 @@
-import { getPlayersData } from "../data/data";
+import { getPlData } from "../data/data";
 import PlayerBox from "./PlayerBox";
 import { useState } from "react";
 import SelectPlayer from "./SelectPlayer";
 
 
 export default function Players({ selectedPlayer, onSelect, onDelete}) {
-  const players = getPlayersData();
+  const players = getPlData();
   const [isAvailable, setIsAvailable] = useState(true);
 
   return (
     <section className="w-11/12 mx-auto">
       <div className="pt-4 flex justify-between items-center pb-4">
         {isAvailable ? (
-          <h1 className="font-bold">Available Players</h1>
+          <h1 className="font-bold bg-slate-200 rounded-xl p-2">Available Players</h1>
         ) : (
           <h1 className="font-bold">
             Selected Players: {selectedPlayer.length}/6
@@ -34,7 +34,7 @@ export default function Players({ selectedPlayer, onSelect, onDelete}) {
         </div>
       </div>
       {isAvailable && (
-        <div className="border-red-500 grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="border-red-400 grid grid-cols-1 md:grid-cols-3 gap-5">
           {players.map((player) => (
             <PlayerBox key={player.id} player={player} onSelect={onSelect} />
           ))}
@@ -44,7 +44,7 @@ export default function Players({ selectedPlayer, onSelect, onDelete}) {
       {!isAvailable && (
         <div className="space-y-4">
           {selectedPlayer.length === 0 ? (
-            <p className="text-center font-bold text-orange-500 text-3xl"> Players Not selected. Click to Add More. </p>
+            <p className="text-center font-bold text-orange-300 text-3xl"> Players Not selected. Click to Add More. </p>
           ) : (
             selectedPlayer.map((player) => (
               <SelectPlayer

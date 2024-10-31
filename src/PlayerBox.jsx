@@ -12,10 +12,10 @@ export default function PlayerBox({player,onSelect}) {
       <figure className="px-10 pt-10 w-96 h-96 ">
         <img src={getImage(player.image)} alt="Pic" className="rounded-xl object-cover w-full h-full" />
       </figure>
-      <div className="Box-body">
+      <div className="card-body">
         <div className="flex gap-2">
           <img src={Profile} alt="" />
-          <h2 className="Box-title">{player.name}</h2>
+          <h2 className="card-title">{player.name}</h2>
         </div>
 
         <div className="flex justify-between gap-24">
