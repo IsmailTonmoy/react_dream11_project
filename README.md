@@ -15,7 +15,7 @@ The innovative web application titled "My Dream - 11 Applications" represents a 
 ## Tech Stack
 
     
-    1. Tailwind CSS: 
+    1. Tailwind CSS 
 
     2. DaisyUI
 
