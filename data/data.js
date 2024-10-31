@@ -61,7 +61,7 @@ const data=[
     }
   ]
 
-  function getPlayersData(){
+  function getPlData(){
     return data
   }
-  export {getPlayersData}
+  export {getPlData}
