@@ -19,7 +19,7 @@ The innovative web application titled "My Dream - 11 Applications" represents a 
 
     2. DaisyUI
 
-    3. react-toastify
+    3. React-toastify
 
     4. React
 
